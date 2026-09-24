@@ -1,0 +1,4 @@
+Q L=5040 pool 28 sum=1.4290: no covering (exhaustive) nodes=319730 (7.9s)
+Q L=7560 pool 33 sum=1.4471: no covering (exhaustive) nodes=100250810 (1290.2s)
+Q L=10080 pool 32 sum=1.4474: no covering (exhaustive) nodes=2794910 (83.6s)
+Q L=20160 pool 37 sum=1.4536: no covering (exhaustive) nodes=9132026 (382.4s)

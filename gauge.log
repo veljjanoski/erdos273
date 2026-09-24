@@ -1,0 +1,8 @@
+direct L=55440 pool 43 sum=1.0437: best uncovered 7804 of 55440 = 0.14076 (2s)
+direct L=110880 pool 52 sum=1.0599: best uncovered 14584 of 110880 = 0.13153 (2s)
+direct L=720720 pool 79 sum=1.1057: best uncovered 85711 of 720720 = 0.11892 (3s)
+Q L=27720 pool 42 sum=1.5873: best uncovered 570 of 27720 = 0.02056 (2s)
+Q L=55440 pool 51 sum=1.6197: best uncovered 876 of 55440 = 0.01580 (2s)
+direct L=1663200 pool 99 sum=1.1096: best uncovered 172592 of 1663200 = 0.10377 (6s)
+Q L=360360 pool 78 sum=1.7114: best uncovered 6025 of 360360 = 0.01672 (2s)
+Q L=831600 pool 98 sum=1.7192: best uncovered 4251 of 831600 = 0.00511 (3s)
