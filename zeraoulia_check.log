@@ -1,0 +1,8 @@
+candidates: 28
+parity filter kills 23 ; residual: [110880, 166320, 221760, 277200, 332640]
+L=110880 F=[4, 6, 10, 12, 16] Q=240 configs=11520 largest margin=-391/7920 (-0.04937)
+L=166320 F=[4, 6, 10, 12] Q=60 configs=720 largest margin=-283/7920 (-0.03573)
+L=221760 F=[4, 6, 10, 12] Q=60 configs=720 largest margin=-593/18480 (-0.03209)
+L=277200 F=[4, 6, 10, 12] Q=60 configs=720 largest margin=-977/30800 (-0.03172)
+L=332640 F=[4, 6, 10, 12] Q=60 configs=720 largest margin=-2159/110880 (-0.01947)
+ALL 28 CANDIDATES EXCLUDED: lcm >= 393120 confirmed

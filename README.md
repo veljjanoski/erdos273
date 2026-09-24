@@ -5,13 +5,23 @@
 moduli m_i > 1 whose union is all integers, as in the Lean formalisation `StrictCoveringSystem`.) Selfridge found
 such a system when p = 3 is allowed (modulus 2), using divisors of 360; `cover273.py 360 3` reproduces it.
 
-**Result.** Every covering system with all moduli of the form p − 1, p ≥ 5, has lcm of its moduli greater than
-30240. Equivalently (see the reduction below) its modulus-2-free half has lcm greater than 15120. Nothing is claimed
-about existence at larger lcm; the reciprocal-sum budget of the pool only reaches values typical of known
-coverings at lcm around 10^5 and above, where the search trees grow too fast for this method. As a non-rigorous
-gauge, greedy placement followed by local search (`gauge273.py`, `gauge.log`) leaves at best 10–14% of the integers
-uncovered with the full pool at lcm 55440 to 1663200, and 0.5–2% for the modulus-2-free family alone at lcm 27720
-to 831600.
+**Result.** No covering system with distinct moduli from Q₃ = {q ≥ 3 : 2q + 1 prime} has lcm ≤ 15120 (exact search;
+271 of these lcms pass the reciprocal-sum test, so this is not a counting statement). By the reduction below, the
+modulus-2-free half of any covering with moduli p − 1 (p ≥ 5) therefore has lcm greater than 15120, and the whole
+system has lcm greater than 30240.
+
+**For the whole system this bound is weak.** The sum of 1/m over the divisors m of L with m + 1 prime is below 1 for
+every L < 55440, so lcm ≥ 55440 follows from counting alone. Moreover R. Zeraoulia (Zenodo, July 2026,
+https://doi.org/10.5281/zenodo.21613011) proves lcm ≥ 393120: only 28 values L < 393120 pass the counting test, a
+parity-capacity argument with the forced moduli 4 and 6 removes 23 of them, and a forced-residue-class certificate
+removes the other five. That certificate is re-implemented independently in `zeraoulia_check.py`
+(`zeraoulia_check.log`) and all of its numbers agree. So the only new content here is the statement about the
+modulus-2-free half; the earlier version of this README and the first comment on the problem page stated lcm > 30240
+without this context.
+
+Nothing is claimed about existence at larger lcm. As a non-rigorous gauge, greedy placement followed by local search
+(`gauge273.py`, `gauge.log`) leaves at best 10–14% of the integers uncovered with the full pool at lcm 55440 to
+1663200, and 0.5–2% for the modulus-2-free family alone at lcm 27720 to 831600.
 
 ## Reduction
 
@@ -47,4 +57,4 @@ decided: the 22 lcms 180, 240, 270, 360, 420, 450, 480, 540, 630, 720, 840, 900,
 
 `cover273.py`, `cover_pool.py` (SAT versions), `cover_dfs.py` (density bound), `cover_dfs2.py` (best-class bound),
 `cover_par2.py` (prefix-parallel driver), `cover_dfs3.py` (element branching, slower, not used for results),
-`budget.py`, `maximal.py`, job lists and logs. Requirements: numpy, numba, sympy, python-sat.
+`budget.py`, `maximal.py`, `zeraoulia_check.py` (check of Zeraoulia's certificate), job lists and logs. Requirements: numpy, numba, sympy, python-sat.
